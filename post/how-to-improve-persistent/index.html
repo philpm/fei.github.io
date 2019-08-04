@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>程序员持续精进攻略之如何高效的学习 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="飞哥" /><meta name="description" content="0. 科学上网 学会科学的上网是程序员的必备技能之一，也是下面讲述的攻略的基础，这里不展开将如何科学上网，贴个左耳朵耗子的github地址大家自行" /><meta name="keywords" content="PHP, Golang, Java, 架构师" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.56.1 with even 4.0.0" />
+
+
+<link rel="canonical" href="http://fei.run/post/how-to-improve-persistent/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.ffbafc50.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="程序员持续精进攻略之如何高效的学习" />
+<meta property="og:description" content="0. 科学上网 学会科学的上网是程序员的必备技能之一，也是下面讲述的攻略的基础，这里不展开将如何科学上网，贴个左耳朵耗子的github地址大家自行" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://fei.run/post/how-to-improve-persistent/" />
+<meta property="article:published_time" content="2019-07-11T20:10:10+08:00" />
+<meta property="article:modified_time" content="2019-07-11T20:10:10+08:00" />
+<meta itemprop="name" content="程序员持续精进攻略之如何高效的学习">
+<meta itemprop="description" content="0. 科学上网 学会科学的上网是程序员的必备技能之一，也是下面讲述的攻略的基础，这里不展开将如何科学上网，贴个左耳朵耗子的github地址大家自行">
+
+
+<meta itemprop="datePublished" content="2019-07-11T20:10:10&#43;08:00" />
+<meta itemprop="dateModified" content="2019-07-11T20:10:10&#43;08:00" />
+<meta itemprop="wordCount" content="3494">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="程序员持续精进攻略之如何高效的学习"/>
+<meta name="twitter:description" content="0. 科学上网 学会科学的上网是程序员的必备技能之一，也是下面讲述的攻略的基础，这里不展开将如何科学上网，贴个左耳朵耗子的github地址大家自行"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">飞哥茶馆</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo"><img src="http://img.wulamusic.com/mp-fei/public/logo.png" alt="飞哥茶馆">
+      <span>飞哥茶馆</span></a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">程序员持续精进攻略之如何高效的学习</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-07-11 </span>
+        <div class="post-category">
+            <a href="/categories/%E5%AD%A6%E4%B9%A0/"> 学习 </a>
+            </div>
+          <span class="more-meta"> 约 3494 字 </span>
+          <span class="more-meta"> 预计阅读 7 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#0-科学上网">0. 科学上网</a></li>
+<li><a href="#1-官方文档">1. 官方文档</a></li>
+<li><a href="#2-用好google">2. 用好Google</a>
+<ul>
+<li><a href="#keywords">Keywords</a></li>
+<li><a href="#时间过滤">时间过滤</a></li>
+</ul></li>
+<li><a href="#3-用好github">3. 用好Github</a>
+<ul>
+<li><a href="#keywords-同google">Keywords: 同google</a></li>
+<li><a href="#advanced-search">Advanced search</a></li>
+</ul></li>
+<li><a href="#4-segmentfault-stackoverflow">4. SegmentFault/StackOverflow</a></li>
+<li><a href="#5-极客时间-medium-oschina-csdn-知乎-掘金-慕课-youtube">5. 极客时间/Medium/OsChina/Csdn/知乎/掘金/慕课/YouTube</a></li>
+<li><a href="#6-english">6. English</a></li>
+<li><a href="#0-科学上网-1">0. 科学上网</a></li>
+<li><a href="#1-官方文档-1">1. 官方文档</a></li>
+<li><a href="#2-用好google-1">2. 用好Google</a>
+<ul>
+<li><a href="#keywords-1">Keywords</a></li>
+<li><a href="#时间过滤-1">时间过滤</a></li>
+</ul></li>
+<li><a href="#3-用好github-1">3. 用好Github</a>
+<ul>
+<li><a href="#keywords-同google-1">Keywords: 同google</a></li>
+<li><a href="#advanced-search-1">Advanced search</a></li>
+</ul></li>
+<li><a href="#4-segmentfault-stackoverflow-1">4. SegmentFault/StackOverflow</a></li>
+<li><a href="#5-极客时间-medium-oschina-csdn-知乎-掘金-慕课-youtube-1">5. 极客时间/Medium/OsChina/Csdn/知乎/掘金/慕课/YouTube</a></li>
+<li><a href="#6-english-1">6. English</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<p><img src="http://img.wulamusic.com/mp-fei/2019/0804/PANO_20120909_172338.jpg" alt="PANO_20120909_172338" /></p>
+
+<h2 id="0-科学上网">0. 科学上网</h2>
+
+<p>学会科学的上网是程序员的必备技能之一，也是下面讲述的攻略的基础，这里不展开将如何科学上网，贴个左耳朵耗子的github地址大家自行膜拜。</p>
+
+<p><code>https://github.com/haoel/haoel.github.io</code></p>
+
+<h2 id="1-官方文档">1. 官方文档</h2>
+
+<p>学习一门新技术时，官方文档是首选，官方文档会提供准确，权威的资料，通过官方文档入手，能够保证认知上不会有太大的偏差，远胜过在网上搜到的那些质量参差不齐的二手资料，教程，特别是对于初学者根本无法分辨质量的好坏。</p>
+
+<p>印象最深的是MongoDB的官方文档，写的非常系统，非常调理，几乎你能想到的问题通过关键词都可以搜索到解决方案，当然也建议阅读英文原版，英文实在太差的看中文社区的翻译版也可以，总之是好过什么菜鸟网之类的一些教程网站。</p>
+
+<h2 id="2-用好google">2. 用好Google</h2>
+
+<blockquote>
+<p><a href="https://zhuanlan.zhihu.com/p/21992724">你为什么一定要使用 Google ?</a></p>
+
+<p>人生苦短 我用Google</p>
+</blockquote>
+
+<p>讲一个小故事，团队里有一次在一个C#程序里做二次开发，需要打印二维码，当时试过很多办法都没有解决掉问题，当时开发同学说他把百度搜索结果页翻了几十页，没有找到有用的信息，寻求我的帮助，我就说了一句“为什么不试试谷歌呢？”，然后再谷歌搜索的第一页第一条记录里就精准的找到了解决方案。</p>
+
+<h3 id="keywords">Keywords</h3>
+
+<ul>
+<li>xxx best practices/xxx最佳实践</li>
+<li>awesome xxx</li>
+<li>xxx right way/xxx之道
+<br /></li>
+</ul>
+
+<h3 id="时间过滤">时间过滤</h3>
+
+<p>搜索时选择最近1年的记录，如果找不到再扩大范围，因为技术更新太快，新的解决方案总是建立在旧的经验之上的。</p>
+
+<h2 id="3-用好github">3. 用好Github</h2>
+
+<h3 id="keywords-同google">Keywords: 同google</h3>
+
+<ul>
+<li>xxx best practices/xxx最佳实践</li>
+<li>awesome xxx</li>
+<li>xxx right way/xxx之道</li>
+</ul>
+
+<h3 id="advanced-search">Advanced search</h3>
+
+<p><strong>指定搜索范围</strong></p>
+
+<ul>
+<li><code>octocat in:file</code> 搜索文件中有octocat的代码</li>
+<li><code>octocat in:path</code> 搜索路径中有octocat的代码</li>
+<li><code>octocat in:file</code>,path 搜索路径中有octocat的代码或者文件中有octocat的代码</li>
+<li><code>display language:sass</code> 搜索用scss写的包含display的代码</li>
+</ul>
+
+<p><strong>通过语言搜索代码</strong></p>
+
+<ul>
+<li><code>element language:xml size:100</code> 搜索大小为100字节的xml代码</li>
+<li><code>user:mozilla language:markdown</code> 搜索mozilla用户下用markdown写的代码</li>
+</ul>
+
+<p><strong>通过fork的数量或者是否有父节点的方式搜索</strong></p>
+
+<ul>
+<li><code>android language:java fork:true</code> 搜索用java写的 android相关的代码并且被fork过</li>
+<li><code>function size:&gt;10000 language:python</code> 搜索与function相关的python代码，文件大小超过10kb</li>
+</ul>
+
+<p><strong>按照目录结构搜索</strong></p>
+
+<ul>
+<li><code>console path:app/public language:javascript</code> 在app/public directory目录下搜索console关键字</li>
+<li><code>form path:cgi-bin language:perl</code> 搜索cgi-bin目录下包含form的perl代码</li>
+</ul>
+
+<p><strong>通过文件名搜索</strong></p>
+
+<ul>
+<li><code>filename:.vimrc commands</code> 搜索 文件名匹配.vimrc 并且包含commands的代码</li>
+<li><code>minitest filename:test_helper path:test language:ruby</code>  在test目录中搜索包含minitest且文件名匹配&rdquo;test_helper&rdquo;的ruby代码</li>
+</ul>
+
+<p><strong>根据扩展名来搜索代码</strong></p>
+
+<ul>
+<li><code>form path:cgi-bin extension:pm</code> 搜索cgi-bin目录下以pm为扩展名的代码</li>
+<li><code>icon size:&gt;200000 extension:css</code> 搜索超过200kb包含icon的css代码</li>
+</ul>
+
+<p><strong>通过用户或者组织来查找</strong></p>
+
+<ul>
+<li><code>user:github extension:rb</code> 查找github用户中以rb为扩展的代码</li>
+<li><code>repo:mozilla/shumway extension:as</code> 搜索mozilla的shumway以as为扩展的代码</li>
+</ul>
+
+<p><strong>根据star数搜索</strong></p>
+
+<ul>
+<li><code>react starts:&gt;300</code> 搜索react相关的，且star数量大于300的项目</li>
+</ul>
+
+<p>搜索结果可以根据需要排序，网站上提供了排序的选项，更多搜索需求可以选择高级搜索</p>
+
+<h2 id="4-segmentfault-stackoverflow">4. SegmentFault/StackOverflow</h2>
+
+<p>Stack Overflow集合google可以解决90%以上的技术问题，知乎有一篇讨论如何优雅使用Stack Overflow的文章，我这里放个链接就不多废话了</p>
+
+<blockquote>
+<p><a href="https://www.zhihu.com/question/20824615">如何优雅地使用 Stack Overflow？</a></p>
+</blockquote>
+
+<p>当然照顾下英文不好的同学，SegmentFault上也能解决一部分问题。</p>
+
+<h2 id="5-极客时间-medium-oschina-csdn-知乎-掘金-慕课-youtube">5. 极客时间/Medium/OsChina/Csdn/知乎/掘金/慕课/YouTube</h2>
+
+<p>都说学习是反人性的，但爱学习的人看到好的博文好的教程都想快速的学习，那时间有限如果在有限的时间高效的学习呢？公众号MacTalk的池大大的建议是有些文章可以加入到收藏夹或者使用笔记软件记录下来，最关键的是要分类，哪些属于稍后读的，哪些属于知识库往后遇到可以通过检索的方式再读，哪些属于需要精读的，哪些属于快速过一遍的。</p>
+
+<p>现在是信息过载的时代，如果需要系统的学习某一技术或某一领域我的建议是选择付费的内容，不能说付费的就比免费的香，但总归付费的内容更系统，学习的时间成本是要低很多的，强烈推荐“极客时间”</p>
+
+<h2 id="6-english">6. English</h2>
+
+<p>英语学习是程序员绕不开的，话说程序员也都知道学习英语的重要性，那你到底真的是这么认为的吗？那你行动起来了吗？这里放一个链接：</p>
+
+<blockquote>
+<p><a href="https://www.jianshu.com/p/0194b98df6bc">对于程序员, 为什么英语比数学更重要? 如何学习</a></p>
+</blockquote>
+
+<p>&ndash;</p>
+
+<blockquote>
+<p>我的建议：可以练习、不求速成、日拱一卒、持续精进</p>
+</blockquote>
+
+<h2 id="0-科学上网-1">0. 科学上网</h2>
+
+<p>学会科学的上网是程序员的必备技能之一，也是下面讲述的攻略的基础，这里不展开将如何科学上网，贴个左耳朵耗子的github地址大家自行膜拜。</p>
+
+<p><code>https://github.com/haoel/haoel.github.io</code></p>
+
+<h2 id="1-官方文档-1">1. 官方文档</h2>
+
+<p>学习一门新技术时，官方文档是首选，官方文档会提供准确，权威的资料，通过官方文档入手，能够保证认知上不会有太大的偏差，远胜过在网上搜到的那些质量参差不齐的二手资料，教程，特别是对于初学者根本无法分辨质量的好坏。</p>
+
+<p>印象最深的是MongoDB的官方文档，写的非常系统，非常调理，几乎你能想到的问题通过关键词都可以搜索到解决方案，当然也建议阅读英文原版，英文实在太差的看中文社区的翻译版也可以，总之是好过什么菜鸟网之类的一些教程网站。</p>
+
+<h2 id="2-用好google-1">2. 用好Google</h2>
+
+<blockquote>
+<p><a href="https://zhuanlan.zhihu.com/p/21992724">你为什么一定要使用 Google ?</a></p>
+
+<p>人生苦短 我用Google</p>
+</blockquote>
+
+<p>讲一个小故事，团队里有一次在一个C#程序里做二次开发，需要打印二维码，当时试过很多办法都没有解决掉问题，当时开发同学说他把百度搜索结果页翻了几十页，没有找到有用的信息，寻求我的帮助，我就说了一句“为什么不试试谷歌呢？”，然后再谷歌搜索的第一页第一条记录里就精准的找到了解决方案。</p>
+
+<h3 id="keywords-1">Keywords</h3>
+
+<ul>
+<li>xxx best practices/xxx最佳实践</li>
+<li>awesome xxx</li>
+<li>xxx right way/xxx之道
+<br /></li>
+</ul>
+
+<h3 id="时间过滤-1">时间过滤</h3>
+
+<p>搜索时选择最近1年的记录，如果找不到再扩大范围，因为技术更新太快，新的解决方案总是建立在旧的经验之上的。</p>
+
+<h2 id="3-用好github-1">3. 用好Github</h2>
+
+<h3 id="keywords-同google-1">Keywords: 同google</h3>
+
+<ul>
+<li>xxx best practices/xxx最佳实践</li>
+<li>awesome xxx</li>
+<li>xxx right way/xxx之道</li>
+</ul>
+
+<h3 id="advanced-search-1">Advanced search</h3>
+
+<p><strong>指定搜索范围</strong></p>
+
+<ul>
+<li><code>octocat in:file</code> 搜索文件中有octocat的代码</li>
+<li><code>octocat in:path</code> 搜索路径中有octocat的代码</li>
+<li><code>octocat in:file</code>,path 搜索路径中有octocat的代码或者文件中有octocat的代码</li>
+<li><code>display language:sass</code> 搜索用scss写的包含display的代码</li>
+</ul>
+
+<p><strong>通过语言搜索代码</strong></p>
+
+<ul>
+<li><code>element language:xml size:100</code> 搜索大小为100字节的xml代码</li>
+<li><code>user:mozilla language:markdown</code> 搜索mozilla用户下用markdown写的代码</li>
+</ul>
+
+<p><strong>通过fork的数量或者是否有父节点的方式搜索</strong></p>
+
+<ul>
+<li><code>android language:java fork:true</code> 搜索用java写的 android相关的代码并且被fork过</li>
+<li><code>function size:&gt;10000 language:python</code> 搜索与function相关的python代码，文件大小超过10kb</li>
+</ul>
+
+<p><strong>按照目录结构搜索</strong></p>
+
+<ul>
+<li><code>console path:app/public language:javascript</code> 在app/public directory目录下搜索console关键字</li>
+<li><code>form path:cgi-bin language:perl</code> 搜索cgi-bin目录下包含form的perl代码</li>
+</ul>
+
+<p><strong>通过文件名搜索</strong></p>
+
+<ul>
+<li><code>filename:.vimrc commands</code> 搜索 文件名匹配.vimrc 并且包含commands的代码</li>
+<li><code>minitest filename:test_helper path:test language:ruby</code>  在test目录中搜索包含minitest且文件名匹配&rdquo;test_helper&rdquo;的ruby代码</li>
+</ul>
+
+<p><strong>根据扩展名来搜索代码</strong></p>
+
+<ul>
+<li><code>form path:cgi-bin extension:pm</code> 搜索cgi-bin目录下以pm为扩展名的代码</li>
+<li><code>icon size:&gt;200000 extension:css</code> 搜索超过200kb包含icon的css代码</li>
+</ul>
+
+<p><strong>通过用户或者组织来查找</strong></p>
+
+<ul>
+<li><code>user:github extension:rb</code> 查找github用户中以rb为扩展的代码</li>
+<li><code>repo:mozilla/shumway extension:as</code> 搜索mozilla的shumway以as为扩展的代码</li>
+</ul>
+
+<p><strong>根据star数搜索</strong></p>
+
+<ul>
+<li><code>react starts:&gt;300</code> 搜索react相关的，且star数量大于300的项目</li>
+</ul>
+
+<p>搜索结果可以根据需要排序，网站上提供了排序的选项，更多搜索需求可以选择高级搜索</p>
+
+<h2 id="4-segmentfault-stackoverflow-1">4. SegmentFault/StackOverflow</h2>
+
+<p>Stack Overflow集合google可以解决90%以上的技术问题，知乎有一篇讨论如何优雅使用Stack Overflow的文章，我这里放个链接就不多废话了</p>
+
+<blockquote>
+<p><a href="https://www.zhihu.com/question/20824615">如何优雅地使用 Stack Overflow？</a></p>
+</blockquote>
+
+<p>当然照顾下英文不好的同学，SegmentFault上也能解决一部分问题。</p>
+
+<h2 id="5-极客时间-medium-oschina-csdn-知乎-掘金-慕课-youtube-1">5. 极客时间/Medium/OsChina/Csdn/知乎/掘金/慕课/YouTube</h2>
+
+<p>都说学习是反人性的，但爱学习的人看到好的博文好的教程都想快速的学习，那时间有限如果在有限的时间高效的学习呢？公众号MacTalk的池大大的建议是有些文章可以加入到收藏夹或者使用笔记软件记录下来，最关键的是要分类，哪些属于稍后读的，哪些属于知识库往后遇到可以通过检索的方式再读，哪些属于需要精读的，哪些属于快速过一遍的。</p>
+
+<p>现在是信息过载的时代，如果需要系统的学习某一技术或某一领域我的建议是选择付费的内容，不能说付费的就比免费的香，但总归付费的内容更系统，学习的时间成本是要低很多的，强烈推荐“极客时间”</p>
+
+<h2 id="6-english-1">6. English</h2>
+
+<p>英语学习是程序员绕不开的，话说程序员也都知道学习英语的重要性，那你到底真的是这么认为的吗？那你行动起来了吗？这里放一个链接：</p>
+
+<blockquote>
+<p><a href="https://www.jianshu.com/p/0194b98df6bc">对于程序员, 为什么英语比数学更重要? 如何学习</a></p>
+</blockquote>
+
+<p>&ndash;</p>
+
+<blockquote>
+<p>我的建议：可以练习、不求速成、日拱一卒、持续精进</p>
+</blockquote>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">飞哥</a></span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-07-11
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/php-design-patterns/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">PHP高手过招之设计模式</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/just-do-it/">
+            <span class="next-text nav-default">别等待完美，先行动起来，不断从错误中学习</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:qin_phil@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/im502" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.linkedin.com/in/philqin/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://github.com/philpm" class="iconfont icon-github" title="github"></a>
+      <a href="https://weibo.com/im502" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://www.zhihu.com/people/im502" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="https://www.douban.com/people/im502/" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://fei.run/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">飞哥</a></span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

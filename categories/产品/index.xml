@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>产品 on Even - A super concise theme for Hugo</title>
+    <link>http://fei.run/categories/%E4%BA%A7%E5%93%81/</link>
+    <description>Recent content in 产品 on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 07 Jul 2019 15:19:17 +0800</lastBuildDate>
+    
+	<atom:link href="http://fei.run/categories/%E4%BA%A7%E5%93%81/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>别等待完美，先行动起来，不断从错误中学习</title>
+      <link>http://fei.run/post/just-do-it/</link>
+      <pubDate>Sun, 07 Jul 2019 15:19:17 +0800</pubDate>
+      
+      <guid>http://fei.run/post/just-do-it/</guid>
+      <description>题图：普达措森林公园 摄于2012年 当今互联网产品唯快不破，你永远也无法等到自己的产品趋于完美在推向市场，但也不能毫无准备为了快而快把垃圾产品</description>
+    </item>
+    
+  </channel>
+</rss>

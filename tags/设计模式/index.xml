@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>设计模式 on Even - A super concise theme for Hugo</title>
+    <link>http://fei.run/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+    <description>Recent content in 设计模式 on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 04 Aug 2019 15:19:17 +0800</lastBuildDate>
+    
+	<atom:link href="http://fei.run/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PHP高手过招之设计模式</title>
+      <link>http://fei.run/post/php-design-patterns/</link>
+      <pubDate>Sun, 04 Aug 2019 15:19:17 +0800</pubDate>
+      
+      <guid>http://fei.run/post/php-design-patterns/</guid>
+      <description>与高手过招内功不修炼好怎么能行，使用设计模式编写程序的好处网上一堆，一些优秀的PHP框架也无不体现着设计模式的妙处，简言之就是使用设计模式编</description>
+    </item>
+    
+  </channel>
+</rss>

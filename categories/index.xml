@@ -6,10 +6,37 @@
     <description>Recent content in Categories on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 01 Jun 2019 15:19:17 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 04 Aug 2019 15:19:17 +0800</lastBuildDate>
     
 	<atom:link href="http://fei.run/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PHP</title>
+      <link>http://fei.run/categories/php/</link>
+      <pubDate>Sun, 04 Aug 2019 15:19:17 +0800</pubDate>
+      
+      <guid>http://fei.run/categories/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>学习</title>
+      <link>http://fei.run/categories/%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Thu, 11 Jul 2019 20:10:10 +0800</pubDate>
+      
+      <guid>http://fei.run/categories/%E5%AD%A6%E4%B9%A0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>产品</title>
+      <link>http://fei.run/categories/%E4%BA%A7%E5%93%81/</link>
+      <pubDate>Sun, 07 Jul 2019 15:19:17 +0800</pubDate>
+      
+      <guid>http://fei.run/categories/%E4%BA%A7%E5%93%81/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>推荐系统</title>
@@ -17,6 +44,15 @@
       <pubDate>Sat, 01 Jun 2019 15:19:17 +0800</pubDate>
       
       <guid>http://fei.run/categories/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>App</title>
+      <link>http://fei.run/categories/app/</link>
+      <pubDate>Wed, 01 Jun 2016 15:19:17 +0800</pubDate>
+      
+      <guid>http://fei.run/categories/app/</guid>
       <description></description>
     </item>
     

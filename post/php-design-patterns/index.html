@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>PHP高手过招之设计模式 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="飞哥" /><meta name="description" content="与高手过招内功不修炼好怎么能行，使用设计模式编写程序的好处网上一堆，一些优秀的PHP框架也无不体现着设计模式的妙处，简言之就是使用设计模式编" /><meta name="keywords" content="PHP, Golang, Java, 架构师" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.56.1 with even 4.0.0" />
+
+
+<link rel="canonical" href="http://fei.run/post/php-design-patterns/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.ffbafc50.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="PHP高手过招之设计模式" />
+<meta property="og:description" content="与高手过招内功不修炼好怎么能行，使用设计模式编写程序的好处网上一堆，一些优秀的PHP框架也无不体现着设计模式的妙处，简言之就是使用设计模式编" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://fei.run/post/php-design-patterns/" />
+<meta property="article:published_time" content="2019-08-04T15:19:17+08:00" />
+<meta property="article:modified_time" content="2019-08-04T15:19:17+08:00" />
+<meta itemprop="name" content="PHP高手过招之设计模式">
+<meta itemprop="description" content="与高手过招内功不修炼好怎么能行，使用设计模式编写程序的好处网上一堆，一些优秀的PHP框架也无不体现着设计模式的妙处，简言之就是使用设计模式编">
+
+
+<meta itemprop="datePublished" content="2019-08-04T15:19:17&#43;08:00" />
+<meta itemprop="dateModified" content="2019-08-04T15:19:17&#43;08:00" />
+<meta itemprop="wordCount" content="3416">
+
+
+
+<meta itemprop="keywords" content="PHP,设计模式," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="PHP高手过招之设计模式"/>
+<meta name="twitter:description" content="与高手过招内功不修炼好怎么能行，使用设计模式编写程序的好处网上一堆，一些优秀的PHP框架也无不体现着设计模式的妙处，简言之就是使用设计模式编"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">飞哥茶馆</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">归档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo"><img src="http://img.wulamusic.com/mp-fei/public/logo.png" alt="飞哥茶馆">
+      <span>飞哥茶馆</span></a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">归档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">PHP高手过招之设计模式</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-08-04 </span>
+        <div class="post-category">
+            <a href="/categories/php/"> PHP </a>
+            </div>
+          <span class="more-meta"> 约 3416 字 </span>
+          <span class="more-meta"> 预计阅读 7 分钟 </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#s-o-l-i-d-设计原则">S.O.L.I.D 设计原则</a>
+<ul>
+<li><a href="#s-单一职责原则-srp-single-responsibility-principle">S: 单一职责原则 (SRP)Single Responsibility Principle</a></li>
+<li><a href="#o-开闭原则-ocp-open-closed-principle">O: 开闭原则 (OCP) Open/Closed Principle</a></li>
+<li><a href="#l-里氏替换原则-lsp-liskov-substitution-principle">L: 里氏替换原则 (LSP) Liskov Substitution Principle</a></li>
+<li><a href="#i-接口隔离原则-isp-interface-segregation-principle">I: 接口隔离原则 (ISP) Interface Segregation Principle</a></li>
+<li><a href="#d-依赖倒置原则-dip-dependency-inversion-principle">D: 依赖倒置原则 (DIP) Dependency Inversion Principle</a></li>
+</ul></li>
+<li><a href="#设计模式-design-patterns">设计模式 Design Patterns</a>
+<ul>
+<li><a href="#参考-php设计模式全集2018-https-learnku-com-docs-php-design-patterns-2018-about-1524">参考：<a href="https://learnku.com/docs/php-design-patterns/2018/about/1524">PHP设计模式全集2018</a></a></li>
+<li><a href="#其他学习资料">其他学习资料</a></li>
+<li><a href="#后记">后记</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<p><img src="http://img.wulamusic.com/mp-fei/2019/0804/design.jpeg" alt="design" /></p>
+
+<blockquote>
+<p>与高手过招内功不修炼好怎么能行，使用设计模式编写程序的好处网上一堆，一些优秀的PHP框架也无不体现着设计模式的妙处，简言之就是使用设计模式编写的程序易于理解、易于扩展、易于维护</p>
+</blockquote>
+
+<p>网上有很多不错的文章，我就做个小小的搬运工</p>
+
+<h1 id="s-o-l-i-d-设计原则">S.O.L.I.D 设计原则</h1>
+
+<p>SOLID 是Michael Feathers推荐的便于记忆的首字母简写，它代表了Robert Martin命名的最重要的五个面对对象编码设计原则，以下内容转自代码整洁之道PHP实现中文翻译版，原文地址：<a href="https://github.com/php-cpm/clean-code-php#solid">https://github.com/php-cpm/clean-code-php#solid</a></p>
+
+<h2 id="s-单一职责原则-srp-single-responsibility-principle">S: 单一职责原则 (SRP)Single Responsibility Principle</h2>
+
+<p>正如在Clean Code所述，&rdquo;修改一个类应该只为一个理由&rdquo;。 人们总是易于用一堆方法塞满一个类，如同我们只能在飞机上 只能携带一个行李箱（把所有的东西都塞到箱子里）。这样做 的问题是：从概念上这样的类不是高内聚的，并且留下了很多 理由去修改它。将你需要修改类的次数降低到最小很重要。 这是因为，当有很多方法在类中时，修改其中一处，你很难知 晓在代码库中哪些依赖的模块会被影响到。</p>
+
+<p><strong>坏的设计</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php">class UserSettings
+{
+    private $user;
+
+    public function __construct(User $user)
+    {
+        $this-&gt;user = $user;
+    }
+
+    public function changeSettings(array $settings): void
+    {
+        if ($this-&gt;verifyCredentials()) {
+            // ...
+        }
+    }
+
+    private function verifyCredentials(): bool
+    {
+        // ...
+    }
+}</code></pre></td></tr></table>
+</div>
+</div>
+<p><strong>好的设计</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php">class UserAuth 
+{
+    private $user;
+
+    public function __construct(User $user)
+    {
+        $this-&gt;user = $user;
+    }
+    
+    public function verifyCredentials(): bool
+    {
+        // ...
+    }
+}
+
+class UserSettings 
+{
+    private $user;
+    private $auth;
+
+    public function __construct(User $user) 
+    {
+        $this-&gt;user = $user;
+        $this-&gt;auth = new UserAuth($user);
+    }
+
+    public function changeSettings(array $settings): void
+    {
+        if ($this-&gt;auth-&gt;verifyCredentials()) {
+            // ...
+        }
+    }
+}</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="o-开闭原则-ocp-open-closed-principle">O: 开闭原则 (OCP) Open/Closed Principle</h2>
+
+<p>正如Bertrand Meyer所述，&rdquo;软件的工件（ classes, modules, functions 等） 应该对扩展开放，对修改关闭。&rdquo; 然而这句话意味着什么呢？这个原则大体上表示你 应该允许在不改变已有代码的情况下增加新的功能</p>
+
+<p><strong>坏的设计</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php">abstract class Adapter
+{
+    protected $name;
+
+    public function getName(): string
+    {
+        return $this-&gt;name;
+    }
+}
+
+class AjaxAdapter extends Adapter
+{
+    public function __construct()
+    {
+        parent::__construct();
+
+        $this-&gt;name = &#39;ajaxAdapter&#39;;
+    }
+}
+
+class NodeAdapter extends Adapter
+{
+    public function __construct()
+    {
+        parent::__construct();
+
+        $this-&gt;name = &#39;nodeAdapter&#39;;
+    }
+}
+
+class HttpRequester
+{
+    private $adapter;
+
+    public function __construct(Adapter $adapter)
+    {
+        $this-&gt;adapter = $adapter;
+    }
+
+    public function fetch(string $url): Promise
+    {
+        $adapterName = $this-&gt;adapter-&gt;getName();
+
+        if ($adapterName === &#39;ajaxAdapter&#39;) {
+            return $this-&gt;makeAjaxCall($url);
+        } elseif ($adapterName === &#39;httpNodeAdapter&#39;) {
+            return $this-&gt;makeHttpCall($url);
+        }
+    }
+
+    private function makeAjaxCall(string $url): Promise
+    {
+        // request and return promise
+    }
+
+    private function makeHttpCall(string $url): Promise
+    {
+        // request and return promise
+    }
+}</code></pre></td></tr></table>
+</div>
+</div>
+<p><strong>好的</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php">interface Adapter
+{
+    public function request(string $url): Promise;
+}
+
+class AjaxAdapter implements Adapter
+{
+    public function request(string $url): Promise
+    {
+        // request and return promise
+    }
+}
+
+class NodeAdapter implements Adapter
+{
+    public function request(string $url): Promise
+    {
+        // request and return promise
+    }
+}
+
+class HttpRequester
+{
+    private $adapter;
+
+    public function __construct(Adapter $adapter)
+    {
+        $this-&gt;adapter = $adapter;
+    }
+
+    public function fetch(string $url): Promise
+    {
+        return $this-&gt;adapter-&gt;request($url);
+    }
+}</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="l-里氏替换原则-lsp-liskov-substitution-principle">L: 里氏替换原则 (LSP) Liskov Substitution Principle</h2>
+
+<p>这是一个简单的原则，却用了一个不好理解的术语。它的正式定义是 &ldquo;如果S是T的子类型，那么在不改变程序原有既定属性（检查、执行 任务等）的前提下，任何T类型的对象都可以使用S类型的对象替代 （例如，使用S的对象可以替代T的对象）&rdquo; 这个定义更难理解:-)。</p>
+
+<p>对这个概念最好的解释是：如果你有一个父类和一个子类，在不改变 原有结果正确性的前提下父类和子类可以互换。这个听起来依旧让人 有些迷惑，所以让我们来看一个经典的正方形-长方形的例子。从数学 上讲，正方形是一种长方形，但是当你的模型通过继承使用了&rdquo;is-a&rdquo; 的关系时，就不对了。</p>
+
+<p><strong>坏的</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php">class Rectangle
+{
+    protected $width = 0;
+    protected $height = 0;
+
+    public function setWidth(int $width): void
+    {
+        $this-&gt;width = $width;
+    }
+
+    public function setHeight(int $height): void
+    {
+        $this-&gt;height = $height;
+    }
+
+    public function getArea(): int
+    {
+        return $this-&gt;width * $this-&gt;height;
+    }
+}
+
+class Square extends Rectangle
+{
+    public function setWidth(int $width): void
+    {
+        $this-&gt;width = $this-&gt;height = $width;
+    }
+
+    public function setHeight(int $height): void
+    {
+        $this-&gt;width = $this-&gt;height = $height;
+    }
+}
+
+function printArea(Rectangle $rectangle): void
+{
+    $rectangle-&gt;setWidth(4);
+    $rectangle-&gt;setHeight(5);
+ 
+    // BAD: Will return 25 for Square. Should be 20.
+    echo sprintf(&#39;%s has area %d.&#39;, get_class($rectangle), $rectangle-&gt;getArea()).PHP_EOL;
+}
+
+$rectangles = [new Rectangle(), new Square()];
+
+foreach ($rectangles as $rectangle) {
+    printArea($rectangle);
+}</code></pre></td></tr></table>
+</div>
+</div>
+<p><strong>好的</strong></p>
+
+<p>最好是将这两种四边形分别对待，用一个适合两种类型的更通用子类型来代替。</p>
+
+<p>尽管正方形和长方形看起来很相似，但他们是不同的。 正方形更接近菱形，而长方形更接近平行四边形。但他们不是子类型。 尽管相似，正方形、长方形、菱形、平行四边形都是有自己属性的不同形状。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php">interface Shape
+{
+    public function getArea(): int;
+}
+
+class Rectangle implements Shape
+{
+    private $width = 0;
+    private $height = 0;
+
+    public function __construct(int $width, int $height)
+    {
+        $this-&gt;width = $width;
+        $this-&gt;height = $height;
+    }
+
+    public function getArea(): int
+    {
+        return $this-&gt;width * $this-&gt;height;
+    }
+}
+
+class Square implements Shape
+{
+    private $length = 0;
+
+    public function __construct(int $length)
+    {
+        $this-&gt;length = $length;
+    }
+
+    public function getArea(): int
+    {
+        return $this-&gt;length ** 2;
+    }
+}
+
+function printArea(Shape $shape): void
+{
+    echo sprintf(&#39;%s has area %d.&#39;, get_class($shape), $shape-&gt;getArea()).PHP_EOL;
+}
+
+$shapes = [new Rectangle(4, 5), new Square(5)];
+
+foreach ($shapes as $shape) {
+    printArea($shape);
+}</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="i-接口隔离原则-isp-interface-segregation-principle">I: 接口隔离原则 (ISP) Interface Segregation Principle</h2>
+
+<p>接口隔离原则表示：&rdquo;调用方不应该被强制依赖于他不需要的接口&rdquo;</p>
+
+<p>有一个清晰的例子来说明示范这条原则。当一个类需要一个大量的设置项， 为了方便不会要求调用方去设置大量的选项，因为在通常他们不需要所有的 设置项。使设置项可选有助于我们避免产生&rdquo;胖接口&rdquo;</p>
+
+<p><strong>坏</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php">interface Employee
+{
+    public function work(): void;
+
+    public function eat(): void;
+}
+
+class HumanEmployee implements Employee
+{
+    public function work(): void
+    {
+        // ....working
+    }
+
+    public function eat(): void
+    {
+        // ...... eating in lunch break
+    }
+}
+
+class RobotEmployee implements Employee
+{
+    public function work(): void
+    {
+        //.... working much more
+    }
+
+    public function eat(): void
+    {
+        //.... robot can&#39;t eat, but it must implement this method
+    }
+}</code></pre></td></tr></table>
+</div>
+</div>
+<p><strong>好</strong></p>
+
+<p>不是每一个工人都是雇员，但是每一个雇员都是一个工人</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php">interface Workable
+{
+    public function work(): void;
+}
+
+interface Feedable
+{
+    public function eat(): void;
+}
+
+interface Employee extends Feedable, Workable
+{
+}
+
+class HumanEmployee implements Employee
+{
+    public function work(): void
+    {
+        // ....working
+    }
+
+    public function eat(): void
+    {
+        //.... eating in lunch break
+    }
+}
+
+// robot can only work
+class RobotEmployee implements Workable
+{
+    public function work(): void
+    {
+        // ....working
+    }
+}</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="d-依赖倒置原则-dip-dependency-inversion-principle">D: 依赖倒置原则 (DIP) Dependency Inversion Principle</h2>
+
+<p>这条原则说明两个基本的要点：</p>
+
+<ol>
+<li>高阶的模块不应该依赖低阶的模块，它们都应该依赖于抽象</li>
+<li>抽象不应该依赖于实现，实现应该依赖于抽象</li>
+</ol>
+
+<p>这条起初看起来有点晦涩难懂，但是如果你使用过 PHP 框架（例如 Symfony），你应该见过 依赖注入（DI），它是对这个概念的实现。虽然它们不是完全相等的概念，依赖倒置原则使高阶模块 与低阶模块的实现细节和创建分离。可以使用依赖注入（DI）这种方式来实现它。最大的好处 是它使模块之间解耦。耦合会导致你难于重构，它是一种非常糟糕的的开发模式。</p>
+
+<p><strong>坏的</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php">class Employee
+{
+    public function work(): void
+    {
+        // ....working
+    }
+}
+
+class Robot extends Employee
+{
+    public function work(): void
+    {
+        //.... working much more
+    }
+}
+
+class Manager
+{
+    private $employee;
+
+    public function __construct(Employee $employee)
+    {
+        $this-&gt;employee = $employee;
+    }
+
+    public function manage(): void
+    {
+        $this-&gt;employee-&gt;work();
+    }
+}</code></pre></td></tr></table>
+</div>
+</div>
+<p><strong>好的</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-php" data-lang="php">interface Employee
+{
+    public function work(): void;
+}
+
+class Human implements Employee
+{
+    public function work(): void
+    {
+        // ....working
+    }
+}
+
+class Robot implements Employee
+{
+    public function work(): void
+    {
+        //.... working much more
+    }
+}
+
+class Manager
+{
+    private $employee;
+
+    public function __construct(Employee $employee)
+    {
+        $this-&gt;employee = $employee;
+    }
+
+    public function manage(): void
+    {
+        $this-&gt;employee-&gt;work();
+    }
+}</code></pre></td></tr></table>
+</div>
+</div>
+<h1 id="设计模式-design-patterns">设计模式 Design Patterns</h1>
+
+<h2 id="参考-php设计模式全集2018-https-learnku-com-docs-php-design-patterns-2018-about-1524">参考：<a href="https://learnku.com/docs/php-design-patterns/2018/about/1524">PHP设计模式全集2018</a></h2>
+
+<p>以下列出这么多设计模式并不见到都要一一掌握，相信很多人在日常的开发中也自觉不自觉的用到不少设计模式，这篇文章更系统的讲了所有设计模式的适用场景并配有例子，通读一遍还是有意义的，常见的10多种掌握就可以了</p>
+
+<ul>
+<li>创建型
+
+<ul>
+<li>抽象工厂模式（Abstract Factory）</li>
+<li>建造者模式（Builder）</li>
+<li>工厂方法模式（Factory Method）</li>
+<li>多例模式（Multiton）</li>
+<li>对象池模式（Pool）</li>
+<li>原型模式（Prototype）</li>
+<li>简单工厂模式（Simple Factory）</li>
+<li>单例模式（Singleton）</li>
+<li>静态工厂模式（Static Factory）</li>
+</ul></li>
+<li>结构型
+
+<ul>
+<li>适配器模式（Adapter）</li>
+<li>桥梁模式（Bridge）</li>
+<li>组合模式（Composite）</li>
+<li>数据映射模式（Data Mapper）</li>
+<li>装饰模式（Decorator）</li>
+<li>依赖注入模式（Dependency Injection）</li>
+<li>门面模式（Facade）</li>
+<li>流接口模式（Fluent Interface）</li>
+<li>享元模式（Flyweight）</li>
+<li>代理模式（Proxy）</li>
+<li>注册模式（Registry）</li>
+</ul></li>
+<li>行为型
+
+<ul>
+<li>责任链模式（Chain Of Responsibilities）</li>
+<li>命令行模式（Command）</li>
+<li>迭代器模式（Iterator）</li>
+<li>中介者模式（Mediator）</li>
+<li>备忘录模式（Memento）</li>
+<li>空对象模式（Null Object）</li>
+<li>观察者模式（Observer）</li>
+<li>规格模式（Specification）</li>
+<li>状态模式（State）</li>
+<li>策略模式（Strategy）</li>
+<li>模板方法模式（Template Method）</li>
+<li>访问者模式（Visitor）</li>
+</ul></li>
+<li>更多模式
+
+<ul>
+<li>委托模式（Delegation）</li>
+<li>服务定位器模式（Service Locator）</li>
+<li>资源库模式（Repository）</li>
+<li>实体属性值模式（EAV 模式）</li>
+</ul></li>
+</ul>
+
+<h2 id="其他学习资料">其他学习资料</h2>
+
+<ul>
+<li>Rango 韩天峰 在慕课网上的一个关于设计模式免费课程 <a href="https://www.imooc.com/learn/236">https://www.imooc.com/learn/236</a></li>
+<li>一个php技术栈后端猿的知识储备仓库，里面有很多干货，包括设计模式的一些例子 <a href="http://easy-tips.tigerb.cn/">http://easy-tips.tigerb.cn/</a></li>
+<li>PHP 完整实战 23 种设计模式 <a href="https://learnku.com/articles/3749/php-complete-combat-23-design-patterns">https://learnku.com/articles/3749/php-complete-combat-23-design-patterns</a></li>
+<li>S.O.L.I.D 面向对象设计和编程（OOD&amp;OOP）笔记 <a href="https://learnku.com/articles/4160/solid-object-oriented-design-and-programming-oodoop-notes">https://learnku.com/articles/4160/solid-object-oriented-design-and-programming-oodoop-notes</a></li>
+</ul>
+
+<h2 id="后记">后记</h2>
+
+<p>本文内容纯搬运，后续我会加入一些自己的理解讲几个比较实用的设计模式，敬请期待！</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">飞哥</a></span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-08-04
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/php/">PHP</a>
+          <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/how-to-improve-persistent/">
+            <span class="next-text nav-default">程序员持续精进攻略之如何高效的学习</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:qin_phil@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/im502" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.linkedin.com/in/philqin/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://github.com/philpm" class="iconfont icon-github" title="github"></a>
+      <a href="https://weibo.com/im502" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://www.zhihu.com/people/im502" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="https://www.douban.com/people/im502/" class="iconfont icon-douban" title="douban"></a>
+  <a href="http://fei.run/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">飞哥</a></span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
