@@ -2,22 +2,63 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://fei.run/about/</loc>
+    <loc>http://fei.run/</loc>
+    <lastmod>2019-08-01T15:19:17+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://fei.run/post/my-first-post/</loc>
+    <lastmod>2019-08-01T15:19:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://fei.run/post/</loc>
+    <lastmod>2019-08-01T15:19:17+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://fei.run/categories/</loc>
+    <lastmod>2019-06-01T15:19:17+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://fei.run/</loc>
+    <loc>http://fei.run/tags/predictionio/</loc>
+    <lastmod>2019-06-01T15:19:17+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://fei.run/tags/</loc>
+    <lastmod>2019-06-01T15:19:17+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://fei.run/post/predictionio-e-commerce/</loc>
+    <lastmod>2019-06-01T15:19:17+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://fei.run/categories/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2019-06-01T15:19:17+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://fei.run/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2019-06-01T15:19:17+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://fei.run/about/</loc>
     <priority>0</priority>
   </url>
   
