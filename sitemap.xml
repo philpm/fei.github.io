@@ -8,12 +8,6 @@
   </url>
   
   <url>
-    <loc>http://fei.run/</loc>
-    <lastmod>2019-08-04T15:19:17+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://fei.run/categories/php/</loc>
     <lastmod>2019-08-04T15:19:17+08:00</lastmod>
     <priority>0</priority>
@@ -46,6 +40,12 @@
   
   <url>
     <loc>http://fei.run/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
+    <lastmod>2019-08-04T15:19:17+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://fei.run/</loc>
     <lastmod>2019-08-04T15:19:17+08:00</lastmod>
     <priority>0</priority>
   </url>
