@@ -6,10 +6,19 @@
     <description>Recent content in Categories on 飞哥茶馆 - 飞哥的架构师之路</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 04 Aug 2019 20:01:10 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 08 Aug 2019 14:01:10 +0800</lastBuildDate>
     
 	<atom:link href="http://fei.run/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>电影</title>
+      <link>http://fei.run/categories/%E7%94%B5%E5%BD%B1/</link>
+      <pubDate>Thu, 08 Aug 2019 14:01:10 +0800</pubDate>
+      
+      <guid>http://fei.run/categories/%E7%94%B5%E5%BD%B1/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>音乐</title>
