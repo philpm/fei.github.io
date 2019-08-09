@@ -6,10 +6,28 @@
     <description>Recent content in Tags on 飞哥茶馆 - 飞哥的架构师之路</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 08 Aug 2019 14:01:10 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 09 Aug 2019 20:13:14 +0800</lastBuildDate>
     
 	<atom:link href="http://fei.run/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>设计模式</title>
+      <link>http://fei.run/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Fri, 09 Aug 2019 20:13:14 +0800</pubDate>
+      
+      <guid>http://fei.run/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>适配器模式</title>
+      <link>http://fei.run/tags/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Fri, 09 Aug 2019 20:13:14 +0800</pubDate>
+      
+      <guid>http://fei.run/tags/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>国漫</title>
@@ -26,15 +44,6 @@
       <pubDate>Sun, 04 Aug 2019 15:19:17 +0800</pubDate>
       
       <guid>http://fei.run/tags/php/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>设计模式</title>
-      <link>http://fei.run/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
-      <pubDate>Sun, 04 Aug 2019 15:19:17 +0800</pubDate>
-      
-      <guid>http://fei.run/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
       <description></description>
     </item>
     

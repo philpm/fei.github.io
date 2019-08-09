@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 飞哥茶馆 - 飞哥的架构师之路</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 08 Aug 2019 14:01:10 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 09 Aug 2019 20:13:14 +0800</lastBuildDate>
     
 	<atom:link href="http://fei.run/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PHP设计模式之适配器模式Adapter</title>
+      <link>http://fei.run/post/php-design-patterns-adapter/</link>
+      <pubDate>Fri, 09 Aug 2019 20:13:14 +0800</pubDate>
+      
+      <guid>http://fei.run/post/php-design-patterns-adapter/</guid>
+      <description>适配器模式Adapter的作用是将一个类的接口转换成客户希望的另外一个接口,使用原本不兼容的而不能在一起工作的那些类可以在一起工作，用好此模</description>
+    </item>
     
     <item>
       <title>别人的看法都是狗屁，你是谁只有你自己说了才算，这是爹教我的道理</title>
