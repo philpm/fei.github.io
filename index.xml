@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>飞哥茶馆 - 飞哥的架构师之路</title>
+    <title>飞哥茶馆 - 去他的狗屁理想</title>
     <link>http://fei.run/</link>
-    <description>Recent content on 飞哥茶馆 - 飞哥的架构师之路</description>
+    <description>Recent content on 飞哥茶馆 - 去他的狗屁理想</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 09 Aug 2019 20:13:14 +0800</lastBuildDate>
@@ -98,15 +98,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://fei.run/about/</guid>
-      <description>About 飞哥  秦艳飞/男/1981 本科(统招)/河南科技大学 信息管理与信息系统 (2001-2005) 工作年限：10年以上互联网技术开发及技术管理经验 Email：qin_phil@qq.com  技能总结  擅长LNMP开发及架构设计 精通PHP开发，熟悉常见的设计模式，擅长Yii2框架，熟悉CI、TP、Laravel、Swoole、HyperF 熟练掌握MYSQL数据库的开发和性能调优 熟练掌握Memcached/Redis/MongoDB等非关系型数据库的使用场景，并在项目中大量使用 熟练搭建和使用Sentry、ELK日志系统、，熟悉基于Elasticsearch构建高性能搜索引擎 熟悉消息队列、RPC的使用场景 熟练掌握Linux系统运维体系，熟悉高并发高可用系统架构设计，如nginx/lvs负载均衡、Mysql读写分离、MongoDB副本集及分片集群，熟悉常用的CI/CD工具 熟悉基于协同过滤算法的推荐引擎PredictionIO 对Go/Python/Java有一定的基础，熟悉其生态，了解各语言擅长的业务领域 有丰富的第三方平台对接经验，如微信公众号小程序第三方平台、有赞、微店、美团、携程、飞猪、钉钉等 熟悉大前端解决方案，如前端Vue框架生态，IOS、Android原生，Ionic、Weex、React Native混合App开发、桌面Electron跨平台解决方案，Uniapp、Mpvue多端解决方案  工作经历 北京途牛天下信息技术有限公司 技术总监 （ 2015年10月 ~ 2019年7月 ）
-下属人数：25-30
-汇报对象：CEO
-工作内容 全面负责技术团队的组建和管理，日常工作包括：
- 整体参与各业务线产品的需求分析、把控产品规划设计 整体负责系统设计方案，参与从技术选型、架构设计到项目落地全流程 确定技术团队的编码规范、代码Review规范、代码发布上线规范 负责新技术的评估及引进落地，项目的质量管理、性能调优 负责技术人员招聘、培训、考核、文化建设。  主要成果  近2年主导了前后端分离的开发模式，以及后端服务化拆分 主导了基于PredictionIO的产品推荐引擎的部署 小泥人SaaS系统主要包含智慧景区、智慧门店、微信公众号小程序平台，微信营销平台 协助公司申请软著10多个，并拿下国家高新和中关村高新俩个高新技术企业证书   铁甲信息技术（北京）有限公司 技术总监（ 2010年1月 ~ 2014年7月 ）
-下属人数：10
-汇报对象：CEO
-工作内容 联合创办铁甲网，初期技术由自己1人承担，产品上线后逐步才组建技术团队，全面负责人员招聘、产品设计、技术选型、架构设计、核心程序开发、运维等工作
-主要成果  用2年时间将铁甲网打造成工程机械行业第一的用户社区 设计并开发了工程机械产品库及代理商综合管理平台 搭建了国内第一家二手工程机械C2C平台  中票在线 PHP工程师（ 2008年1月 ~ 2009年12月 ）</description>
+      <description>About 飞哥 博客不定期更新，关于互联网技术、产品、副业搞钱等等</description>
     </item>
     
   </channel>
