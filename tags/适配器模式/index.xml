@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>适配器模式 on 飞哥茶馆 - 去他的狗屁理想</title>
-    <link>http://fei.run/tags/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/</link>
+    <link>https://fei.run/tags/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/</link>
     <description>Recent content in 适配器模式 on 飞哥茶馆 - 去他的狗屁理想</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 09 Aug 2019 20:13:14 +0800</lastBuildDate>
     
-	<atom:link href="http://fei.run/tags/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://fei.run/tags/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>PHP设计模式之适配器模式Adapter</title>
-      <link>http://fei.run/post/php-design-patterns-adapter/</link>
+      <link>https://fei.run/post/php-design-patterns-adapter/</link>
       <pubDate>Fri, 09 Aug 2019 20:13:14 +0800</pubDate>
       
-      <guid>http://fei.run/post/php-design-patterns-adapter/</guid>
+      <guid>https://fei.run/post/php-design-patterns-adapter/</guid>
       <description>适配器模式Adapter的作用是将一个类的接口转换成客户希望的另外一个接口,使用原本不兼容的而不能在一起工作的那些类可以在一起工作，用好此模</description>
     </item>
     

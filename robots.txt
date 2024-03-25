@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: http://fei.run/sitemap.xml
+Sitemap: https://fei.run/sitemap.xml

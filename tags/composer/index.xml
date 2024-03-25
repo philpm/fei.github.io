@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>composer on 飞哥茶馆 - 去他的狗屁理想</title>
-    <link>http://fei.run/tags/composer/</link>
+    <link>https://fei.run/tags/composer/</link>
     <description>Recent content in composer on 飞哥茶馆 - 去他的狗屁理想</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 28 Jun 2019 21:19:17 +0800</lastBuildDate>
     
-	<atom:link href="http://fei.run/tags/composer/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://fei.run/tags/composer/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>手把手教你撸一个composer扩展</title>
-      <link>http://fei.run/post/php-composer-custom-lib/</link>
+      <link>https://fei.run/post/php-composer-custom-lib/</link>
       <pubDate>Fri, 28 Jun 2019 21:19:17 +0800</pubDate>
       
-      <guid>http://fei.run/post/php-composer-custom-lib/</guid>
+      <guid>https://fei.run/post/php-composer-custom-lib/</guid>
       <description>PHP程序员都是使用composer进行包管理，平时更多的是require别人开发的扩展，其实自己写扩展也是非常容易的，本文已一个简单的例子</description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hybird on 飞哥茶馆 - 去他的狗屁理想</title>
-    <link>http://fei.run/tags/hybird/</link>
+    <link>https://fei.run/tags/hybird/</link>
     <description>Recent content in Hybird on 飞哥茶馆 - 去他的狗屁理想</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 01 Jun 2016 15:19:17 +0800</lastBuildDate>
     
-	<atom:link href="http://fei.run/tags/hybird/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://fei.run/tags/hybird/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ionic2：创建App启动页滑动欢迎界面</title>
-      <link>http://fei.run/post/ionic2-welcome-page-slide/</link>
+      <link>https://fei.run/post/ionic2-welcome-page-slide/</link>
       <pubDate>Wed, 01 Jun 2016 15:19:17 +0800</pubDate>
       
-      <guid>http://fei.run/post/ionic2-welcome-page-slide/</guid>
+      <guid>https://fei.run/post/ionic2-welcome-page-slide/</guid>
       <description>效果如下，图片来自网络 本文例子和上图稍有不同，主要功能如下： 每滑动一下展示一张全屏图片； 滑动到最后一页才出现启动按钮； 欢迎界面只在第一次安装</description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>推荐系统 on 飞哥茶馆 - 去他的狗屁理想</title>
-    <link>http://fei.run/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/</link>
+    <link>https://fei.run/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/</link>
     <description>Recent content in 推荐系统 on 飞哥茶馆 - 去他的狗屁理想</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 01 Jun 2019 15:19:17 +0800</lastBuildDate>
     
-	<atom:link href="http://fei.run/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://fei.run/tags/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>使用PredictionIO快速搭建电商推荐系统</title>
-      <link>http://fei.run/post/predictionio-e-commerce/</link>
+      <link>https://fei.run/post/predictionio-e-commerce/</link>
       <pubDate>Sat, 01 Jun 2019 15:19:17 +0800</pubDate>
       
-      <guid>http://fei.run/post/predictionio-e-commerce/</guid>
+      <guid>https://fei.run/post/predictionio-e-commerce/</guid>
       <description>PredictionIO能做什么？ PredictionIO是一个开源的机器学习服务器，建立在最先进的开源堆栈之上，供开发人员和数据科学家为任</description>
     </item>
     
